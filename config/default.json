@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.dev",
-  "theme": "wp-framework",
+  "domain": "mozart.work",
+  "theme": "wp-mozart",
   "path": {
     "base": {
       "src":"assets/",

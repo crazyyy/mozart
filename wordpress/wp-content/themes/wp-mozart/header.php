@@ -12,36 +12,44 @@
   <!-- icons -->
   <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
-  <!--[if lt IE 9]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <!-- css + javascript -->
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!-- wrapper -->
-<div class="wrapper">
-  <header role="banner">
-    <div class="inner">
 
-      <div class="logo">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          <a href="<?php echo home_url(); ?>">
-        <?php } ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          </a>
-        <?php } ?>
-      </div><!-- /logo -->
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <?php if ( !is_front_page() && !is_home() ){ ?>
+            <a href="<?php echo home_url(); ?>">
+          <?php } ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="img-responsive">
+          <?php if ( !is_front_page() && !is_home() ){ ?>
+            </a>
+          <?php } ?>
+        </div>
+        <div class="slogan">We welcome all music lovers, as well as everyone who are going to become ones! <br>Come with your little ones to feel the relaxing environment of our concerts!</div>
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com/PlaywithMozart/" target="_blank" class="sprites i-fb"></a></li>
+          <li><a href="#" target="_blank" class="sprites i-ins"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCYpObBZ8IwsO-JBpO-2QafA" target="_blank" class="sprites i-tube"></a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- /header -->
+    <!-- navigation -->
+    <nav>
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <?php wpeHeadNav(); ?>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
 
-      <nav class="nav" role="navigation">
-        <?php wpeHeadNav(); ?>
-      </nav><!-- /nav -->
-
-    </div><!-- /.inner -->
-  </header><!-- /header -->
-
-  <section role="main">
-    <div class="inner">

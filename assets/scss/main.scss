@@ -1,6 +1,7 @@
 @import 'sites/bootstrap';
 @import 'sites/jquery.fancybox';
 @import 'sites/jquery.formstyler';
+@import 'import/variables';
 @import 'import/wordpress';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&subset=cyrillic');
@@ -435,9 +436,7 @@ header {
     vertical-align: top;
   }
   a {
-    -webkit-transition: all .3s linear;
-         -o-transition: all .3s linear;
-            transition: all .3s linear;
+    transition: all .3s linear;
     &:hover {
       opacity: .8;
     }
@@ -458,9 +457,7 @@ nav {
 
   padding: 10px 15px;
 
-  -webkit-transition: all .3s linear;
-       -o-transition: all .3s linear;
-          transition: all .3s linear;
+  transition: all .3s linear;
   white-space: nowrap;
   text-decoration: none;
 
@@ -476,7 +473,8 @@ nav {
       background: #008a82;
     }
   }
-  .active > a {
+  .active > a,
+  .current-menu-item > a {
     color: #ffffff;
     background: #008a82;
   }

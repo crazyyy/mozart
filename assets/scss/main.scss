@@ -1259,6 +1259,32 @@ nav {
 
 /* gifts */
 
+.product-block__container {
+  .product-block {
+    &:nth-child(1) {
+      margin-top: 48px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 0;
+      padding-bottom: 90px;
+      &:after {
+        bottom: -11px;
+
+        height: 81px;
+
+        background: url(../img/product-block-after-2.png) 50% 0 no-repeat;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 30px;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
 .product-block {
   position: relative;
 

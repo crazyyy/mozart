@@ -7435,8 +7435,8 @@ div.aligncenter {
   font-family: Hangyaboly;
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/Hangyaboly.eot");
   src: url("../fonts/Hangyaboly.woff2") format("woff2"), url("../fonts/Hangyaboly.woff") format("woff"), url("../fonts/Hangyaboly.ttf") format("truetype"), url("../fonts/Hangyaboly.svg#Hangyaboly") format("svg"), url("../fonts/Hangyaboly.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Hangyaboly.eot");
 }
 
 * {
@@ -7680,6 +7680,11 @@ textarea {
 
 .text-block .title {
   margin-bottom: 24px;
+}
+
+.text-block p {
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .dotted-link {

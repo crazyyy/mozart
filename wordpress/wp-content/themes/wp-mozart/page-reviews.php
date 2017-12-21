@@ -26,7 +26,7 @@
               <!-- review-block -->
               <div class="review-block">
                 <div class="clearfix">
-                  <?php $image = get_sub_field('image');  if( !empty($image) ): ?>
+                  <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
                     <div class="review-image"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive"></div>
                   <?php endif; ?>
                   <div class="review-text">

@@ -8567,6 +8567,11 @@ nav {
   display: none;
 }
 
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+
 .product-block {
   position: relative;
   margin-bottom: 27px;

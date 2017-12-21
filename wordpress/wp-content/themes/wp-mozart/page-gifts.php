@@ -1,6 +1,5 @@
 <?php /* Template Name: Gift Page */ get_header(); ?>
 
-
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
       <?php if ( has_post_thumbnail()) { ?>
         <div class="image-block"><img src="<?php echo the_post_thumbnail_url('full'); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"  class="img-responsive center-block"></div>

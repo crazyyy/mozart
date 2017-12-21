@@ -58,6 +58,9 @@ function wpeHeaderScripts() {
     wp_deregister_script( 'jquery-form' );
 
     //  Load footer scripts (footer.php)
+    wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '1.0.0', true);
+    wp_enqueue_script('bootstrap');
+
     wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
     wp_enqueue_script('wpeScripts');
 
@@ -681,6 +684,77 @@ function disable_emojicons_tinymce( $plugins ) {
   } else {
     return array();
   }
+}
+
+
+add_action( 'init', 'post_type_photos' );
+function post_type_photos() {
+  $labels = array(
+    'name'=> 'Photos',
+    'singular_name' => 'Photos',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Photos Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 6,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-format-gallery',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'photos' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'photos' , $args );
+}
+
+add_action( 'init', 'post_type_videos' );
+function post_type_videos() {
+  $labels = array(
+    'name'=> 'Videos',
+    'singular_name' => 'Videos',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Videos Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 7,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-format-video',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'videos' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'videos' , $args );
 }
 
 ?>

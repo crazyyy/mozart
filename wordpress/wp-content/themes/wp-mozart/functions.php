@@ -757,4 +757,39 @@ function post_type_videos() {
   register_post_type( 'videos' , $args );
 }
 
+add_action( 'init', 'post_type_concert' );
+function post_type_concert() {
+  $labels = array(
+    'name'=> 'Concert',
+    'singular_name' => 'Concert',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Concert Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 8,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-tickets',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'concert' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'concert' , $args );
+}
+
 ?>
